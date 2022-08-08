@@ -35,9 +35,9 @@
                     console.log(d);
                     times.push(d.time);
                     if (d.type == "execution") {
-                        vals.push(10);
+                        vals.push(parseFloat(d.info.blk_num));
                     } else {
-                        vals.push(5);
+                        //vals.push(5);
                     }
                 }
 

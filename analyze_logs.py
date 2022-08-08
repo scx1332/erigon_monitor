@@ -41,9 +41,22 @@ def parse_bodies_line(line):
     }
 
 def parse_execution_line(line):
+    info = {}
+    if "Executed blocks" in line:
+        info["blk_num"] = line.split("number=")[1].split(" ")[0]
+        info["blk_per_s"] = line.split("blk/s=")[1].split(" ")[0]
+        info["tx_per_s"] = line.split("tx/s=")[1].split(" ")[0]
+        info["mgas_per_s"] = line.split("Mgas/s=")[1].split(" ")[0]
+        info["gas_state"] = line.split("gasState=")[1].split(" ")[0]
+        info["batch_size"] = line.split("batch=")[1].split(" ")[0]
+        info["alloc"] = line.split("alloc=")[1].split(" ")[0]
+        info["sys"] = line.split("sys=")[1].split("\n")[0]
+        return info
+
     return {
         "progress": "todo"
     }
+
 
 
 def parse_info_line(line):
