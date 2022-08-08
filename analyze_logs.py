@@ -40,22 +40,24 @@ def parse_bodies_line(line):
         "progress": "todo"
     }
 
+def parse_execution_limits_line(line):
+    info = {}
+    info["from"] = line.split("from=")[1].split(" ")[0]
+    info["to"] = line.split("to=")[1].split(" ")[0]
+    return info
+
 def parse_execution_line(line):
     info = {}
-    if "Executed blocks" in line:
-        info["blk_num"] = line.split("number=")[1].split(" ")[0]
-        info["blk_per_s"] = line.split("blk/s=")[1].split(" ")[0]
-        info["tx_per_s"] = line.split("tx/s=")[1].split(" ")[0]
-        info["mgas_per_s"] = line.split("Mgas/s=")[1].split(" ")[0]
-        info["gas_state"] = line.split("gasState=")[1].split(" ")[0]
-        info["batch_size"] = line.split("batch=")[1].split(" ")[0]
-        info["alloc"] = line.split("alloc=")[1].split(" ")[0]
-        info["sys"] = line.split("sys=")[1].split("\n")[0]
-        return info
+    info["blk_num"] = line.split("number=")[1].split(" ")[0]
+    info["blk_per_s"] = line.split("blk/s=")[1].split(" ")[0]
+    info["tx_per_s"] = line.split("tx/s=")[1].split(" ")[0]
+    info["mgas_per_s"] = line.split("Mgas/s=")[1].split(" ")[0]
+    info["gas_state"] = line.split("gasState=")[1].split(" ")[0]
+    info["batch_size"] = line.split("batch=")[1].split(" ")[0]
+    info["alloc"] = line.split("alloc=")[1].split(" ")[0]
+    info["sys"] = line.split("sys=")[1].split("\n")[0]
+    return info
 
-    return {
-        "progress": "todo"
-    }
 
 
 
@@ -78,8 +80,13 @@ def parse_info_line(line):
         event["info"] = parse_bodies_line(line)
 
     if "[6/16 Execution]" in line:
-        event["type"] = "execution"
-        event["info"] = parse_execution_line(line)
+        if "Executed blocks" in line:
+            event["type"] = "execution"
+            event["info"] = parse_execution_line(line)
+        if "Blocks execution" in line:
+            event["type"] = "execution_limits"
+            event["info"] = parse_execution_limits_line(line)
+
 
     return event
 
@@ -96,6 +103,9 @@ for line in open("goerli_err.log"):
     else:
         print("Unknown line")
 
+response = {}
+response["events"] = events
+
 with open("output.json", "w") as f:
-    f.write(json.dumps(events, indent=4, default=str))
-print(json.dumps(events, indent=4, default=str))
+    f.write(json.dumps(response, indent=4, default=str))
+print(json.dumps(response, indent=4, default=str))
