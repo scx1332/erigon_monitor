@@ -1,0 +1,422 @@
+[INFO] [08-08|15:06:46.195] Build info                               git_branch=devel git_tag=v2021.10.03-1609-ga481b7748 git_commit=a481b774896b0a013faab3d2983f74f03c1940f9
+[INFO] [08-08|15:06:46.195] Starting Erigon on Görli testnet... 
+[INFO] [08-08|15:06:46.196] Maximum peer count                       ETH=100 total=100
+[INFO] [08-08|15:06:46.196] starting HTTP APIs                       APIs=eth,debug,net,trace,web3,erigon
+[INFO] [08-08|15:06:46.196] torrent verbosity                        level=WRN
+[INFO] [08-08|15:06:48.298] Set global gas cap                       cap=50000000
+[INFO] [08-08|15:06:48.302] Opening Database                         label=chaindata path=/home/ubuntu/.erigon_goerli/chaindata
+[INFO] [08-08|15:06:48.304] Re-Opening DB in exclusive mode to apply migrations 
+[INFO] [08-08|15:06:48.305] Apply migration                          name=db_schema_version5
+[INFO] [08-08|15:06:48.305] Applied migration                        name=db_schema_version5
+[INFO] [08-08|15:06:48.305] Apply migration                          name=txs_begin_end
+[INFO] [08-08|15:06:48.305] Applied migration                        name=txs_begin_end
+[INFO] [08-08|15:06:48.305] Apply migration                          name=reset_blocks_3
+[INFO] [08-08|15:06:48.306] Applied migration                        name=reset_blocks_3
+[INFO] [08-08|15:06:48.306] Updated DB schema to                     version=6.0.0
+[INFO] [08-08|15:06:48.311] Writing custom genesis block             hash=0xbf7e331f7f7c1dd2e05159666b3bf8bc7a8a3a9eb1d518969eab529dd9b88c1a
+[INFO] [08-08|15:06:48.312] Initialised chain configuration          config="{ChainID: 5, Homestead: 0, DAO: <nil>, DAO Support: true, Tangerine Whistle: 0, Spurious Dragon: 0, Byzantium: 0, Constantinople: 0, Petersburg: 0, Istanbul: 1561651, Muir Glacier: <nil>, Berlin: 4460644, London: 5062605, Arrow Glacier: <nil>, Gray Glacier: <nil>, Terminal Total Difficulty: 10790000, Merge Netsplit: <nil>, Engine: clique}" genesis=0xbf7e331f7f7c1dd2e05159666b3bf8bc7a8a3a9eb1d518969eab529dd9b88c1a
+[INFO] [08-08|15:06:48.312] Effective                                prune_flags= snapshot_flags="--snapshots=true"
+[INFO] [08-08|15:06:48.312] Using snapshots                          on=true
+[INFO] [08-08|15:06:48.314] Initialising Ethereum protocol           network=5
+[INFO] [08-08|15:06:48.319] Starting private RPC server              on=127.0.0.1:9091
+[INFO] [08-08|15:06:48.319] new subscription to logs established 
+[INFO] [08-08|15:06:48.319] rpc filters: subscribing to Erigon events 
+[INFO] [08-08|15:06:48.319] new subscription to newHeaders established 
+[INFO] [08-08|15:06:48.319] New txs subscriber joined 
+[INFO] [08-08|15:06:48.319] Reading JWT secret                       path=/home/ubuntu/.erigon_goerli/jwt.hex
+[INFO] [08-08|15:06:48.319] Generated JWT secret                     path=/home/ubuntu/.erigon_goerli/jwt.hex
+[INFO] [08-08|15:06:48.319] HTTP endpoint opened for Engine API      url=localhost:8551 ws=true ws.compression=true
+[INFO] [08-08|15:06:48.320] HTTP endpoint opened                     url=localhost:8845 ws=true ws.compression=true grpc=false
+[INFO] [08-08|15:06:48.322] Started P2P networking                   version=66 self=enode://9182da7e46e5fb09a6d0b5482d57d6def364b9f6150695948669bde0465197a273dc95da45a9353060ba6ae540437e57c8ff14e32b1eace01cf5e0f6c12b4bae@127.0.0.1:40406 name=erigon/v2022.99.99-dev-a481b774/linux-amd64/go1.18.1
+[INFO] [08-08|15:06:48.330] [Snapshots] Fetching torrent files metadata 
+[INFO] [08-08|15:06:48.330] [txpool] Started 
+[INFO] [08-08|15:07:08.339] [Snapshots] download                     progress="0.00% 0B/36.9GB" download=0B/s upload=0B/s peers=50 connections=165 files=42 alloc=94.2MB sys=161.9MB
+[INFO] [08-08|15:07:28.339] [Snapshots] download                     progress="1.23% 463.6MB/36.9GB" download=23.2MB/s upload=0B/s peers=50 connections=197 files=42 alloc=142.9MB sys=196.1MB
+[INFO] [08-08|15:07:48.319] [txpool] stat                            block=0 pending=0 baseFee=0 queued=0 alloc=144.1MB sys=218.5MB
+[INFO] [08-08|15:07:48.339] [Snapshots] download                     progress="3.80% 1.4GB/36.9GB" download=48.6MB/s upload=0B/s peers=51 connections=187 files=42 alloc=144.6MB sys=218.5MB
+[INFO] [08-08|15:08:08.339] [Snapshots] download                     progress="6.40% 2.4GB/36.9GB" download=49.0MB/s upload=0B/s peers=51 connections=201 files=42 alloc=173.6MB sys=267.4MB
+[INFO] [08-08|15:08:28.339] [Snapshots] download                     progress="8.96% 3.3GB/36.9GB" download=48.2MB/s upload=0B/s peers=55 connections=196 files=42 alloc=193.9MB sys=294.0MB
+[INFO] [08-08|15:08:48.314] [p2p] GoodPeers                          eth66=3
+[INFO] [08-08|15:08:48.319] [txpool] stat                            block=0 pending=0 baseFee=0 queued=0 alloc=246.4MB sys=318.5MB
+[INFO] [08-08|15:08:48.339] [Snapshots] download                     progress="11.55% 4.3GB/36.9GB" download=49.0MB/s upload=0B/s peers=56 connections=204 files=42 alloc=247.0MB sys=318.5MB
+[INFO] [08-08|15:09:08.339] [Snapshots] download                     progress="14.17% 5.2GB/36.9GB" download=49.3MB/s upload=0B/s peers=57 connections=212 files=42 alloc=252.2MB sys=330.6MB
+[INFO] [08-08|15:09:28.339] [Snapshots] download                     progress="16.77% 6.2GB/36.9GB" download=49.1MB/s upload=0B/s peers=56 connections=205 files=42 alloc=284.6MB sys=356.9MB
+[INFO] [08-08|15:09:48.319] [txpool] stat                            block=0 pending=0 baseFee=0 queued=0 alloc=253.5MB sys=373.4MB
+[INFO] [08-08|15:09:48.339] [Snapshots] download                     progress="19.37% 7.1GB/36.9GB" download=49.1MB/s upload=0B/s peers=57 connections=207 files=42 alloc=254.6MB sys=373.4MB
+[INFO] [08-08|15:10:08.339] [Snapshots] download                     progress="21.98% 8.1GB/36.9GB" download=49.2MB/s upload=0B/s peers=58 connections=210 files=42 alloc=179.3MB sys=398.0MB
+[INFO] [08-08|15:10:28.339] [Snapshots] download                     progress="24.60% 9.1GB/36.9GB" download=49.4MB/s upload=0B/s peers=57 connections=210 files=42 alloc=198.9MB sys=416.3MB
+[INFO] [08-08|15:10:48.314] [p2p] GoodPeers                          eth66=10
+[INFO] [08-08|15:10:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=0 alloc=311.5MB sys=428.4MB
+[INFO] [08-08|15:10:48.340] [Snapshots] download                     progress="27.21% 10.0GB/36.9GB" download=49.2MB/s upload=0B/s peers=57 connections=212 files=42 alloc=312.2MB sys=428.4MB
+[INFO] [08-08|15:11:08.339] [Snapshots] download                     progress="29.80% 11.0GB/36.9GB" download=48.8MB/s upload=0B/s peers=58 connections=190 files=42 alloc=315.1MB sys=448.7MB
+[INFO] [08-08|15:11:28.339] [Snapshots] download                     progress="32.40% 11.9GB/36.9GB" download=49.1MB/s upload=0B/s peers=59 connections=180 files=42 alloc=359.2MB sys=456.9MB
+[INFO] [08-08|15:11:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=0 alloc=326.1MB sys=461.3MB
+[INFO] [08-08|15:11:48.339] [Snapshots] download                     progress="35.00% 12.9GB/36.9GB" download=49.0MB/s upload=0B/s peers=61 connections=183 files=42 alloc=326.5MB sys=461.3MB
+[INFO] [08-08|15:12:08.339] [Snapshots] download                     progress="37.59% 13.9GB/36.9GB" download=48.9MB/s upload=0B/s peers=59 connections=185 files=42 alloc=249.3MB sys=469.4MB
+[INFO] [08-08|15:12:28.339] [Snapshots] download                     progress="40.14% 14.8GB/36.9GB" download=48.1MB/s upload=0B/s peers=57 connections=185 files=42 alloc=356.8MB sys=487.4MB
+[INFO] [08-08|15:12:48.314] [p2p] GoodPeers                          eth66=17
+[INFO] [08-08|15:12:48.319] [txpool] stat                            block=0 pending=0 baseFee=0 queued=0 alloc=211.4MB sys=495.4MB
+[INFO] [08-08|15:12:48.339] [Snapshots] download                     progress="42.73% 15.7GB/36.9GB" download=48.9MB/s upload=0B/s peers=55 connections=165 files=42 alloc=211.9MB sys=495.4MB
+[INFO] [08-08|15:13:08.339] [Snapshots] download                     progress="45.27% 16.7GB/36.9GB" download=47.9MB/s upload=0B/s peers=54 connections=136 files=42 alloc=350.1MB sys=503.7MB
+[INFO] [08-08|15:13:28.339] [Snapshots] download                     progress="47.88% 17.6GB/36.9GB" download=49.1MB/s upload=0B/s peers=56 connections=127 files=42 alloc=360.6MB sys=515.9MB
+[INFO] [08-08|15:13:48.319] [txpool] stat                            block=0 pending=0 baseFee=0 queued=0 alloc=342.7MB sys=519.9MB
+[INFO] [08-08|15:13:48.339] [Snapshots] download                     progress="50.47% 18.6GB/36.9GB" download=48.9MB/s upload=0B/s peers=59 connections=125 files=42 alloc=344.3MB sys=519.9MB
+[INFO] [08-08|15:14:08.339] [Snapshots] download                     progress="53.03% 19.5GB/36.9GB" download=48.3MB/s upload=0B/s peers=56 connections=124 files=42 alloc=255.5MB sys=519.9MB
+[INFO] [08-08|15:14:28.339] [Snapshots] download                     progress="55.57% 20.5GB/36.9GB" download=48.1MB/s upload=0B/s peers=51 connections=104 files=42 alloc=237.0MB sys=519.9MB
+[INFO] [08-08|15:14:48.314] [p2p] GoodPeers                          eth66=22
+[INFO] [08-08|15:14:48.319] [txpool] stat                            block=0 pending=0 baseFee=0 queued=0 alloc=366.9MB sys=519.9MB
+[INFO] [08-08|15:14:48.339] [Snapshots] download                     progress="58.22% 21.5GB/36.9GB" download=49.9MB/s upload=0B/s peers=48 connections=83 files=42 alloc=368.0MB sys=519.9MB
+[INFO] [08-08|15:15:08.339] [Snapshots] download                     progress="60.82% 22.4GB/36.9GB" download=49.2MB/s upload=0B/s peers=46 connections=86 files=42 alloc=206.7MB sys=519.9MB
+[INFO] [08-08|15:15:28.339] [Snapshots] download                     progress="63.42% 23.4GB/36.9GB" download=49.1MB/s upload=0B/s peers=49 connections=84 files=42 alloc=280.6MB sys=519.9MB
+[INFO] [08-08|15:15:48.319] [txpool] stat                            block=0 pending=0 baseFee=0 queued=0 alloc=280.8MB sys=519.9MB
+[INFO] [08-08|15:15:48.339] [Snapshots] download                     progress="66.02% 24.3GB/36.9GB" download=49.1MB/s upload=292.8KB/s peers=48 connections=85 files=42 alloc=282.3MB sys=519.9MB
+[INFO] [08-08|15:16:08.339] [Snapshots] download                     progress="68.64% 25.3GB/36.9GB" download=49.3MB/s upload=204.8KB/s peers=44 connections=85 files=42 alloc=232.3MB sys=519.9MB
+[INFO] [08-08|15:16:28.339] [Snapshots] download                     progress="71.24% 26.3GB/36.9GB" download=49.1MB/s upload=1.0MB/s peers=43 connections=83 files=42 alloc=324.0MB sys=519.9MB
+[INFO] [08-08|15:16:48.314] [p2p] GoodPeers                          eth66=25
+[INFO] [08-08|15:16:48.319] [txpool] stat                            block=0 pending=0 baseFee=0 queued=0 alloc=355.6MB sys=519.9MB
+[INFO] [08-08|15:16:48.339] [Snapshots] download                     progress="73.86% 27.2GB/36.9GB" download=49.4MB/s upload=1.8MB/s peers=44 connections=83 files=42 alloc=356.5MB sys=519.9MB
+[INFO] [08-08|15:17:08.339] [Snapshots] download                     progress="76.46% 28.2GB/36.9GB" download=49.2MB/s upload=0B/s peers=44 connections=85 files=42 alloc=232.1MB sys=519.9MB
+[INFO] [08-08|15:17:28.339] [Snapshots] download                     progress="79.08% 29.1GB/36.9GB" download=49.3MB/s upload=0B/s peers=39 connections=66 files=42 alloc=197.2MB sys=519.9MB
+[INFO] [08-08|15:17:48.319] [txpool] stat                            block=0 pending=0 baseFee=0 queued=0 alloc=240.0MB sys=519.9MB
+[INFO] [08-08|15:17:48.339] [Snapshots] download                     progress="81.66% 30.1GB/36.9GB" download=48.7MB/s upload=0B/s peers=33 connections=47 files=42 alloc=241.1MB sys=519.9MB
+[INFO] [08-08|15:18:08.339] [Snapshots] download                     progress="84.24% 31.0GB/36.9GB" download=48.8MB/s upload=0B/s peers=22 connections=30 files=42 alloc=252.4MB sys=519.9MB
+[INFO] [08-08|15:18:28.339] [Snapshots] download                     progress="86.33% 31.8GB/36.9GB" download=39.3MB/s upload=0B/s peers=12 connections=18 files=42 alloc=227.0MB sys=519.9MB
+[INFO] [08-08|15:18:48.314] [p2p] GoodPeers                          eth66=33
+[INFO] [08-08|15:18:48.319] [txpool] stat                            block=0 pending=0 baseFee=0 queued=0 alloc=180.2MB sys=519.9MB
+[INFO] [08-08|15:18:48.339] [Snapshots] download                     progress="87.77% 32.3GB/36.9GB" download=27.3MB/s upload=0B/s peers=12 connections=21 files=42 alloc=180.6MB sys=519.9MB
+[INFO] [08-08|15:19:08.339] [Snapshots] download                     progress="89.20% 32.9GB/36.9GB" download=27.0MB/s upload=0B/s peers=12 connections=18 files=42 alloc=352.7MB sys=519.9MB
+[INFO] [08-08|15:19:28.340] [Snapshots] download                     progress="90.66% 33.4GB/36.9GB" download=27.5MB/s upload=0B/s peers=12 connections=17 files=42 alloc=247.3MB sys=519.9MB
+[INFO] [08-08|15:19:48.319] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=228.6MB sys=519.9MB
+[INFO] [08-08|15:19:48.339] [Snapshots] download                     progress="92.25% 34.0GB/36.9GB" download=30.0MB/s upload=0B/s peers=14 connections=18 files=42 alloc=229.3MB sys=519.9MB
+[INFO] [08-08|15:20:08.339] [Snapshots] download                     progress="93.92% 34.6GB/36.9GB" download=31.5MB/s upload=0B/s peers=12 connections=16 files=42 alloc=208.4MB sys=519.9MB
+[INFO] [08-08|15:20:28.339] [Snapshots] download                     progress="95.98% 35.4GB/36.9GB" download=38.8MB/s upload=0B/s peers=13 connections=15 files=42 alloc=197.5MB sys=520.4MB
+[INFO] [08-08|15:20:48.314] [p2p] GoodPeers                          eth66=33
+[INFO] [08-08|15:20:48.319] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=241.5MB sys=520.4MB
+[INFO] [08-08|15:20:48.339] [Snapshots] download                     progress="98.07% 36.1GB/36.9GB" download=39.4MB/s upload=0B/s peers=11 connections=12 files=42 alloc=242.1MB sys=520.4MB
+[INFO] [08-08|15:21:28.855] [snapshots] Verifying                    progress=63.58%
+[INFO] [08-08|15:21:48.321] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=143.8MB sys=1.0GB
+[INFO] [08-08|15:21:48.854] [snapshots] Verifying                    progress=89.47%
+[INFO] [08-08|15:21:59.047] [Snapshots] Stat                         blocks=0k indices=0k alloc=746.2MB sys=1.0GB
+[INFO] [08-08|15:22:44.785] [index] calculating                      file=v1-000000-000500-transactions.idx
+[INFO] [08-08|15:22:45.864] [index] calculating                      file=v1-000500-001000-transactions.idx
+[INFO] [08-08|15:22:48.315] [p2p] GoodPeers                          eth66=32
+[INFO] [08-08|15:22:48.319] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=1.3GB sys=2.1GB
+[INFO] [08-08|15:22:49.570] [index] write                            file=v1-000000-000500-transactions.idx
+[INFO] [08-08|15:22:51.150] [index] write                            file=v1-000500-001000-transactions.idx
+[INFO] [08-08|15:22:55.893] [index] calculating                      file=v1-001000-001500-transactions.idx
+[INFO] [08-08|15:22:59.048] [snapshots] Indexing                     progress="v1-001000-001500-transactions.seg=50%, v1-001500-002000-transactions.seg=34%" alloc=1.3GB sys=2.1GB
+[INFO] [08-08|15:23:00.555] [index] calculating                      file=v1-001500-002000-transactions.idx
+[INFO] [08-08|15:23:01.500] [index] write                            file=v1-001000-001500-transactions.idx
+[INFO] [08-08|15:23:08.232] [index] write                            file=v1-001500-002000-transactions.idx
+[INFO] [08-08|15:23:11.933] [index] calculating                      file=v1-002000-002500-transactions.idx
+[INFO] [08-08|15:23:19.889] [index] write                            file=v1-002000-002500-transactions.idx
+[INFO] [08-08|15:23:20.879] [index] calculating                      file=v1-002500-003000-transactions.idx
+[INFO] [08-08|15:23:28.937] [index] write                            file=v1-002500-003000-transactions.idx
+[INFO] [08-08|15:23:34.344] [index] calculating                      file=v1-003000-003500-transactions.idx
+[INFO] [08-08|15:23:43.658] [index] write                            file=v1-003000-003500-transactions.idx
+[INFO] [08-08|15:23:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=2.1GB sys=3.0GB
+[INFO] [08-08|15:23:52.404] [index] calculating                      file=v1-003500-004000-transactions.idx
+[INFO] [08-08|15:23:59.048] [snapshots] Indexing                     progress="v1-003500-004000-transactions.seg=50%, v1-004000-004500-transactions.seg=19%" alloc=2.1GB sys=3.3GB
+[INFO] [08-08|15:24:05.901] [index] write                            file=v1-003500-004000-transactions.idx
+[INFO] [08-08|15:24:22.289] [index] calculating                      file=v1-004000-004500-transactions.idx
+[INFO] [08-08|15:24:44.900] [index] write                            file=v1-004000-004500-transactions.idx
+[INFO] [08-08|15:24:48.314] [p2p] GoodPeers                          eth66=37
+[INFO] [08-08|15:24:48.319] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=2.7GB sys=3.8GB
+[INFO] [08-08|15:24:59.048] [snapshots] Indexing                     progress="v1-004000-004500-transactions.seg=50%, v1-004500-005000-transactions.seg=22%" alloc=2.1GB sys=3.8GB
+[INFO] [08-08|15:25:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=2.3GB sys=4.0GB
+[INFO] [08-08|15:25:50.360] [index] calculating                      file=v1-004500-005000-transactions.idx
+[INFO] [08-08|15:25:59.048] [snapshots] Indexing                     progress="v1-004500-005000-transactions.seg=50%, v1-005000-005500-transactions.seg=41%" alloc=2.7GB sys=4.0GB
+[INFO] [08-08|15:26:12.046] [index] calculating                      file=v1-005000-005500-transactions.idx
+[INFO] [08-08|15:26:42.331] [index] write                            file=v1-005000-005500-transactions.idx
+[INFO] [08-08|15:26:48.314] [p2p] GoodPeers                          eth66=37
+[INFO] [08-08|15:26:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=2.0GB sys=4.0GB
+[INFO] [08-08|15:26:59.048] [snapshots] Indexing                     progress="v1-004500-005000-transactions.seg=50%, v1-005000-005500-transactions.seg=50%" alloc=2.8GB sys=4.0GB
+[INFO] [08-08|15:27:01.473] [index] write                            file=v1-004500-005000-transactions.idx
+[INFO] [08-08|15:27:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=1.8GB sys=4.1GB
+[INFO] [08-08|15:27:59.047] [snapshots] Indexing                     progress="v1-004500-005000-transactions.seg=50%, v1-005500-006000-transactions.seg=49%" alloc=2.3GB sys=4.1GB
+[INFO] [08-08|15:27:59.060] [index] calculating                      file=v1-005500-006000-transactions.idx
+[INFO] [08-08|15:28:16.446] [index] write                            file=v1-005500-006000-transactions.idx
+[INFO] [08-08|15:28:48.314] [p2p] GoodPeers                          eth66=38
+[INFO] [08-08|15:28:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=1.6GB sys=4.1GB
+[INFO] [08-08|15:28:59.048] [snapshots] Indexing                     progress="v1-006000-006500-transactions.seg=12%, v1-006500-007000-transactions.seg=5%" alloc=2.1GB sys=4.1GB
+[INFO] [08-08|15:29:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=2.0GB sys=4.1GB
+[INFO] [08-08|15:29:59.047] [snapshots] Indexing                     progress="v1-006000-006500-transactions.seg=41%, v1-006500-007000-transactions.seg=11%" alloc=2.2GB sys=4.1GB
+[INFO] [08-08|15:30:38.398] [index] calculating                      file=v1-006000-006500-transactions.idx
+[INFO] [08-08|15:30:48.315] [p2p] GoodPeers                          eth66=38
+[INFO] [08-08|15:30:48.319] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=2.2GB sys=4.1GB
+[INFO] [08-08|15:30:59.047] [snapshots] Indexing                     progress="v1-006000-006500-transactions.seg=50%, v1-006500-007000-transactions.seg=21%" alloc=2.7GB sys=4.1GB
+[INFO] [08-08|15:31:46.158] [index] write                            file=v1-006000-006500-transactions.idx
+[INFO] [08-08|15:31:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=1.8GB sys=4.1GB
+[INFO] [08-08|15:31:59.048] [snapshots] Indexing                     progress="v1-006000-006500-transactions.seg=50%, v1-006500-007000-transactions.seg=35%" alloc=1.7GB sys=4.1GB
+[INFO] [08-08|15:32:48.314] [p2p] GoodPeers                          eth66=38
+[INFO] [08-08|15:32:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=2.5GB sys=4.1GB
+[INFO] [08-08|15:32:59.048] [snapshots] Indexing                     progress="v1-006500-007000-transactions.seg=45%" alloc=3.0GB sys=4.1GB
+[INFO] [08-08|15:33:22.213] [index] calculating                      file=v1-006500-007000-transactions.idx
+[INFO] [08-08|15:33:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=1.5GB sys=4.1GB
+[INFO] [08-08|15:33:59.048] [snapshots] Indexing                     progress="v1-006500-007000-transactions.seg=50%" alloc=2.1GB sys=4.1GB
+[INFO] [08-08|15:34:06.348] [index] write                            file=v1-006500-007000-transactions.idx
+[INFO] [08-08|15:34:48.314] [p2p] GoodPeers                          eth66=38
+[INFO] [08-08|15:34:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=1.6GB sys=4.1GB
+[INFO] [08-08|15:35:13.316] [1/16 Headers] Writing total difficulty index for snapshots block_num=3720427
+[INFO] [08-08|15:35:33.316] [1/16 Headers] Writing total difficulty index for snapshots block_num=6618078
+[INFO] [08-08|15:35:42.851] [1/16 Headers] Waiting for headers...    from=6999999
+[INFO] [08-08|15:35:44.716] [Clique] Stored checkpoint snapshot to disk number=6900000 hash=0xa5a83ff6599dbe00b3f4b9e35dc32cdbeddd57befdceb37584c6dc3f3cc726ef
+[INFO] [08-08|15:35:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=1.4GB sys=4.1GB
+[INFO] [08-08|15:35:50.413] Estimated to reaching TTD                blocks=526312
+[INFO] [08-08|15:35:51.017] Estimated to reaching TTD                blocks=522640
+[INFO] [08-08|15:35:51.143] Estimated to reaching TTD                blocks=261214
+[INFO] [08-08|15:35:51.548] Estimated to reaching TTD                blocks=520282
+[INFO] [08-08|15:35:52.625] Estimated to reaching TTD                blocks=506235
+[INFO] [08-08|15:35:54.163] Estimated to reaching TTD                blocks=503876
+[INFO] [08-08|15:35:56.505] Estimated to reaching TTD                blocks=247268
+[INFO] [08-08|15:35:57.885] Estimated to reaching TTD                blocks=478123
+[INFO] [08-08|15:36:02.852] [1/16 Headers] Wrote block headers       number=7033947 blk/second=1697.400 alloc=1.2GB sys=4.1GB
+[INFO] [08-08|15:36:08.633] Estimated to reaching TTD                blocks=408293
+[INFO] [08-08|15:36:15.234] Estimated to reaching TTD                blocks=394994
+[INFO] [08-08|15:36:22.852] [1/16 Headers] Inserting headers         progress=7101725 queue=1
+[INFO] [08-08|15:36:42.852] [1/16 Headers] Inserting headers         progress=7305030 queue=1
+[INFO] [08-08|15:36:48.314] [p2p] GoodPeers                          eth66=38
+[INFO] [08-08|15:36:48.319] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=851.9MB sys=4.1GB
+[INFO] [08-08|15:37:03.437] [1/16 Headers] Inserting headers         progress=7368918 queue=2
+[INFO] [08-08|15:37:11.748] Estimated to reaching TTD                blocks=19085
+[INFO] [08-08|15:37:13.728] [1/16 Headers] Processed                 highest inserted=7368958 age=20s
+[INFO] [08-08|15:37:13.728] [1/16 Headers] DONE                      in=30m25.398974503s
+[INFO] [08-08|15:37:17.009] [4/16 Bodies] Processing bodies...       from=6999999 to=7368958
+[WARN] [08-08|15:37:17.186] Handling incoming message                stream=RecvMessage err="decode BlockBodiesPacket66: rlp: input list has too many elements for eth.BlockRawBodiesPacket66"
+[WARN] [08-08|15:37:17.205] Handling incoming message                stream=RecvMessage err="decode BlockBodiesPacket66: rlp: input list has too many elements for eth.BlockRawBodiesPacket66"
+[INFO] [08-08|15:37:37.014] [4/16 Bodies] Wrote block bodies         block_num=7000895 delivery/sec=106.7MB wasted/sec=5.0MB alloc=4.7GB sys=5.0GB
+[INFO] [08-08|15:37:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=3.3GB sys=5.7GB
+[INFO] [08-08|15:37:57.011] [4/16 Bodies] Wrote block bodies         block_num=7001151 delivery/sec=12.4MB wasted/sec=1.5MB alloc=3.9GB sys=5.7GB
+[INFO] [08-08|15:38:17.274] [4/16 Bodies] Wrote block bodies         block_num=7023419 delivery/sec=142.9MB wasted/sec=410.0KB alloc=4.9GB sys=8.5GB
+[INFO] [08-08|15:38:37.013] [4/16 Bodies] Wrote block bodies         block_num=7039045 delivery/sec=192.9MB wasted/sec=0B alloc=9.4GB sys=12.2GB
+[INFO] [08-08|15:38:48.314] [p2p] GoodPeers                          eth66=35
+[INFO] [08-08|15:38:48.321] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=5.7GB sys=14.9GB
+[INFO] [08-08|15:38:57.010] [4/16 Bodies] Wrote block bodies         block_num=7045466 delivery/sec=58.2MB wasted/sec=0B alloc=6.2GB sys=14.9GB
+[INFO] [08-08|15:39:17.011] [4/16 Bodies] Wrote block bodies         block_num=7045822 delivery/sec=4.9MB wasted/sec=0B alloc=6.7GB sys=14.9GB
+[INFO] [08-08|15:39:37.010] [4/16 Bodies] Wrote block bodies         block_num=7046256 delivery/sec=2.1MB wasted/sec=0B alloc=6.9GB sys=14.9GB
+[INFO] [08-08|15:39:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=3.2GB sys=14.9GB
+[INFO] [08-08|15:39:57.016] [4/16 Bodies] Wrote block bodies         block_num=7090833 delivery/sec=94.1MB wasted/sec=2.7MB alloc=4.3GB sys=14.9GB
+[INFO] [08-08|15:40:17.011] [4/16 Bodies] Wrote block bodies         block_num=7101834 delivery/sec=39.2MB wasted/sec=456.9KB alloc=3.4GB sys=14.9GB
+[INFO] [08-08|15:40:37.010] [4/16 Bodies] Wrote block bodies         block_num=7101945 delivery/sec=4.3MB wasted/sec=211.2KB alloc=3.9GB sys=14.9GB
+[INFO] [08-08|15:40:48.314] [p2p] GoodPeers                          eth66=35
+[INFO] [08-08|15:40:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=2.4GB sys=14.9GB
+[INFO] [08-08|15:40:57.011] [4/16 Bodies] Wrote block bodies         block_num=7134605 delivery/sec=60.0MB wasted/sec=4.7MB alloc=2.9GB sys=14.9GB
+[INFO] [08-08|15:41:17.222] [4/16 Bodies] Wrote block bodies         block_num=7167760 delivery/sec=38.5MB wasted/sec=737.9KB alloc=3.4GB sys=14.9GB
+[INFO] [08-08|15:41:37.011] [4/16 Bodies] Wrote block bodies         block_num=7168302 delivery/sec=37.7MB wasted/sec=68.3KB alloc=3.7GB sys=14.9GB
+[INFO] [08-08|15:41:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=3.8GB sys=14.9GB
+[INFO] [08-08|15:41:57.011] [4/16 Bodies] Wrote block bodies         block_num=7168367 delivery/sec=539.4KB wasted/sec=0B alloc=3.8GB sys=14.9GB
+[INFO] [08-08|15:42:18.837] [4/16 Bodies] Wrote block bodies         block_num=7201083 delivery/sec=205.1KB wasted/sec=0B alloc=2.5GB sys=14.9GB
+[INFO] [08-08|15:42:37.011] [4/16 Bodies] Wrote block bodies         block_num=7202033 delivery/sec=76.3MB wasted/sec=8.9MB alloc=2.7GB sys=14.9GB
+[INFO] [08-08|15:42:48.314] [p2p] GoodPeers                          eth66=37
+[INFO] [08-08|15:42:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=2.8GB sys=14.9GB
+[INFO] [08-08|15:42:57.010] [4/16 Bodies] Wrote block bodies         block_num=7222562 delivery/sec=45.8MB wasted/sec=229.0KB alloc=3.0GB sys=14.9GB
+[INFO] [08-08|15:43:17.011] [4/16 Bodies] Wrote block bodies         block_num=7223547 delivery/sec=6.1MB wasted/sec=205.9KB alloc=3.6GB sys=14.9GB
+[INFO] [08-08|15:43:37.018] [4/16 Bodies] Wrote block bodies         block_num=7260421 delivery/sec=85.3MB wasted/sec=3.2MB alloc=3.8GB sys=14.9GB
+[INFO] [08-08|15:43:48.321] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=3.4GB sys=14.9GB
+[INFO] [08-08|15:43:57.533] [4/16 Bodies] Wrote block bodies         block_num=7269431 delivery/sec=15.4MB wasted/sec=1.9MB alloc=3.8GB sys=14.9GB
+[INFO] [08-08|15:44:17.018] [4/16 Bodies] Wrote block bodies         block_num=7296887 delivery/sec=121.0MB wasted/sec=1.6MB alloc=4.1GB sys=14.9GB
+[INFO] [08-08|15:44:38.852] [4/16 Bodies] Wrote block bodies         block_num=7327721 delivery/sec=23.4MB wasted/sec=2.6MB alloc=4.0GB sys=14.9GB
+[INFO] [08-08|15:44:48.314] [p2p] GoodPeers                          eth66=37
+[INFO] [08-08|15:44:48.319] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=4.8GB sys=14.9GB
+[INFO] [08-08|15:44:57.011] [4/16 Bodies] Wrote block bodies         block_num=7330989 delivery/sec=121.4MB wasted/sec=5.9MB alloc=5.3GB sys=14.9GB
+[INFO] [08-08|15:45:17.011] [4/16 Bodies] Wrote block bodies         block_num=7331844 delivery/sec=14.2MB wasted/sec=330.2KB alloc=6.8GB sys=14.9GB
+[INFO] [08-08|15:45:37.011] [4/16 Bodies] Wrote block bodies         block_num=7334862 delivery/sec=9.9MB wasted/sec=328.3KB alloc=4.4GB sys=14.9GB
+[INFO] [08-08|15:45:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=4.6GB sys=14.9GB
+[INFO] [08-08|15:45:57.010] [4/16 Bodies] Wrote block bodies         block_num=7334919 delivery/sec=938.5KB wasted/sec=436.6KB alloc=4.7GB sys=14.9GB
+[INFO] [08-08|15:46:17.014] [4/16 Bodies] Wrote block bodies         block_num=7334919 delivery/sec=309.7KB wasted/sec=631.1KB alloc=4.9GB sys=14.9GB
+[INFO] [08-08|15:46:37.011] [4/16 Bodies] Wrote block bodies         block_num=7368603 delivery/sec=4.8MB wasted/sec=878.8KB alloc=5.7GB sys=14.9GB
+[INFO] [08-08|15:46:43.377] [4/16 Bodies] Processed                  highest=7368958
+[INFO] [08-08|15:46:43.378] [4/16 Bodies] DONE                       in=9m26.368709614s
+[INFO] [08-08|15:46:43.380] [5/16 Senders] Started                   from=6999999 to=7368958
+[INFO] [08-08|15:46:48.314] [p2p] GoodPeers                          eth66=33
+[INFO] [08-08|15:46:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=6.2GB sys=14.9GB
+[INFO] [08-08|15:47:13.380] [5/16 Senders] Recovery                  block_number=7038331
+[INFO] [08-08|15:47:43.380] [5/16 Senders] Recovery                  block_number=7066136
+[INFO] [08-08|15:47:48.321] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=1.2GB sys=14.9GB
+[INFO] [08-08|15:48:13.380] [5/16 Senders] Recovery                  block_number=7125564
+[INFO] [08-08|15:48:43.380] [5/16 Senders] Recovery                  block_number=7243527
+[INFO] [08-08|15:48:48.320] [p2p] GoodPeers                          eth66=35
+[INFO] [08-08|15:48:48.327] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=1.5GB sys=14.9GB
+[INFO] [08-08|15:49:13.380] [5/16 Senders] Recovery                  block_number=7335017
+[INFO] [08-08|15:49:27.562] [5/16 Senders] DONE                      in=2m44.183661917s
+[INFO] [08-08|15:49:27.565] [6/16 Execution] Blocks execution        from=0 to=7368958
+[INFO] [08-08|15:49:47.565] [6/16 Execution] Executed blocks         number=419800 blk/s=20989.9 tx/s=2998.3 Mgas/s=586.1 gasState=0.02 batch=26.8MB alloc=1.3GB sys=14.9GB
+[INFO] [08-08|15:49:48.319] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=1.5GB sys=14.9GB
+[INFO] [08-08|15:50:07.566] [6/16 Execution] Executed blocks         number=565020 blk/s=7260.8 tx/s=4160.3 Mgas/s=497.0 gasState=0.04 batch=42.9MB alloc=1.3GB sys=14.9GB
+[INFO] [08-08|15:50:27.566] [6/16 Execution] Executed blocks         number=802836 blk/s=11890.8 tx/s=5528.2 Mgas/s=814.9 gasState=0.07 batch=86.4MB alloc=1.5GB sys=14.9GB
+[INFO] [08-08|15:50:47.567] [6/16 Execution] Executed blocks         number=1009763 blk/s=10346.0 tx/s=5796.6 Mgas/s=854.2 gasState=0.10 batch=128.3MB alloc=1.2GB sys=14.9GB
+[INFO] [08-08|15:50:48.314] [p2p] GoodPeers                          eth66=37
+[INFO] [08-08|15:50:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=1.5GB sys=14.9GB
+[INFO] [08-08|15:51:07.569] [6/16 Execution] Executed blocks         number=1265108 blk/s=12765.6 tx/s=5498.7 Mgas/s=826.0 gasState=0.13 batch=169.9MB alloc=1.8GB sys=14.9GB
+[INFO] [08-08|15:51:27.566] [6/16 Execution] Executed blocks         number=1473154 blk/s=10404.0 tx/s=6435.1 Mgas/s=725.1 gasState=0.16 batch=208.9MB alloc=1.2GB sys=14.9GB
+[INFO] [08-08|15:51:47.567] [6/16 Execution] Executed blocks         number=1580863 blk/s=5385.2 tx/s=4280.0 Mgas/s=765.2 gasState=0.18 batch=237.2MB alloc=1.5GB sys=14.9GB
+[INFO] [08-08|15:51:48.319] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=1.6GB sys=14.9GB
+[INFO] [08-08|15:52:07.581] [6/16 Execution] Executed blocks         number=1626197 blk/s=2265.1 tx/s=2037.4 Mgas/s=749.1 gasState=0.21 batch=248.9MB alloc=1.4GB sys=14.9GB
+[INFO] [08-08|15:52:27.567] [6/16 Execution] Executed blocks         number=1668703 blk/s=2126.8 tx/s=2027.0 Mgas/s=766.3 gasState=0.24 batch=263.1MB alloc=1.5GB sys=14.9GB
+[INFO] [08-08|15:52:47.566] [6/16 Execution] Executed blocks         number=1717742 blk/s=2452.0 tx/s=2507.6 Mgas/s=834.4 gasState=0.27 batch=280.1MB alloc=1.8GB sys=14.9GB
+[INFO] [08-08|15:52:48.315] [p2p] GoodPeers                          eth66=38
+[INFO] [08-08|15:52:48.319] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=2.0GB sys=14.9GB
+[INFO] [08-08|15:53:07.567] [6/16 Execution] Executed blocks         number=1765334 blk/s=2379.6 tx/s=3362.6 Mgas/s=764.8 gasState=0.30 batch=299.9MB alloc=2.2GB sys=14.9GB
+[INFO] [08-08|15:53:27.566] [6/16 Execution] Executed blocks         number=1797303 blk/s=1598.5 tx/s=4223.7 Mgas/s=637.3 gasState=0.32 batch=317.7MB alloc=2.4GB sys=14.9GB
+[INFO] [08-08|15:53:47.566] [6/16 Execution] Executed blocks         number=1822783 blk/s=1274.0 tx/s=2583.3 Mgas/s=469.0 gasState=0.34 batch=330.8MB alloc=1.6GB sys=14.9GB
+[INFO] [08-08|15:53:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=1.7GB sys=14.9GB
+[INFO] [08-08|15:54:07.567] [6/16 Execution] Executed blocks         number=1855605 blk/s=1641.0 tx/s=2543.2 Mgas/s=576.1 gasState=0.36 batch=346.2MB alloc=2.6GB sys=14.9GB
+[INFO] [08-08|15:54:27.566] [6/16 Execution] Executed blocks         number=1877420 blk/s=1090.8 tx/s=3169.5 Mgas/s=530.1 gasState=0.38 batch=359.1MB alloc=2.3GB sys=14.9GB
+[INFO] [08-08|15:54:47.567] [6/16 Execution] Executed blocks         number=1914821 blk/s=1870.0 tx/s=2744.1 Mgas/s=584.1 gasState=0.40 batch=375.1MB alloc=2.9GB sys=14.9GB
+[INFO] [08-08|15:54:48.314] [p2p] GoodPeers                          eth66=40
+[INFO] [08-08|15:54:48.319] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=3.0GB sys=14.9GB
+[INFO] [08-08|15:55:07.568] [6/16 Execution] Executed blocks         number=1952252 blk/s=1871.4 tx/s=2750.8 Mgas/s=568.1 gasState=0.42 batch=390.2MB alloc=1.8GB sys=14.9GB
+[INFO] [08-08|15:55:27.577] [6/16 Execution] Executed blocks         number=1960625 blk/s=418.5 tx/s=1470.7 Mgas/s=337.1 gasState=0.43 batch=397.8MB alloc=3.2GB sys=14.9GB
+[INFO] [08-08|15:55:47.573] [6/16 Execution] Executed blocks         number=1961942 blk/s=65.9 tx/s=683.7 Mgas/s=215.9 gasState=0.44 batch=398.9MB alloc=2.3GB sys=14.9GB
+[INFO] [08-08|15:55:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=2.3GB sys=14.9GB
+[INFO] [08-08|15:56:07.582] [6/16 Execution] Executed blocks         number=1963281 blk/s=66.9 tx/s=662.7 Mgas/s=216.2 gasState=0.45 batch=400.0MB alloc=2.9GB sys=14.9GB
+[INFO] [08-08|15:56:27.568] [6/16 Execution] Executed blocks         number=1976034 blk/s=638.1 tx/s=1779.9 Mgas/s=387.0 gasState=0.46 batch=410.0MB alloc=3.1GB sys=14.9GB
+[INFO] [08-08|15:56:47.569] [6/16 Execution] Executed blocks         number=2006524 blk/s=1524.4 tx/s=3054.1 Mgas/s=616.8 gasState=0.48 batch=429.1MB alloc=2.0GB sys=14.9GB
+[INFO] [08-08|15:56:48.314] [p2p] GoodPeers                          eth66=41
+[INFO] [08-08|15:56:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=2.0GB sys=14.9GB
+[INFO] [08-08|15:57:07.571] [6/16 Execution] Executed blocks         number=2030659 blk/s=1206.6 tx/s=2222.9 Mgas/s=510.3 gasState=0.50 batch=440.6MB alloc=3.1GB sys=14.9GB
+[INFO] [08-08|15:57:27.567] [6/16 Execution] Executed blocks         number=2066573 blk/s=1796.1 tx/s=2896.3 Mgas/s=660.7 gasState=0.53 batch=459.0MB alloc=3.4GB sys=14.9GB
+[INFO] [08-08|15:57:47.566] [6/16 Execution] Executed blocks         number=2089870 blk/s=1164.9 tx/s=2099.9 Mgas/s=561.6 gasState=0.55 batch=474.0MB alloc=2.8GB sys=14.9GB
+[INFO] [08-08|15:57:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=2.9GB sys=14.9GB
+[INFO] [08-08|15:58:07.566] [6/16 Execution] Executed blocks         number=2120496 blk/s=1531.3 tx/s=2506.3 Mgas/s=625.1 gasState=0.57 batch=492.2MB alloc=2.9GB sys=14.9GB
+[INFO] [08-08|15:58:27.569] [6/16 Execution] Executed blocks         number=2143403 blk/s=1145.2 tx/s=2080.0 Mgas/s=492.5 gasState=0.59 batch=505.5MB alloc=2.0GB sys=14.9GB
+[INFO] [08-08|15:58:47.567] [6/16 Execution] Executed blocks         number=2173102 blk/s=1485.1 tx/s=2263.8 Mgas/s=518.9 gasState=0.61 batch=522.0MB alloc=3.0GB sys=14.9GB
+[INFO] [08-08|15:58:48.315] [p2p] GoodPeers                          eth66=41
+[INFO] [08-08|15:58:48.319] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=3.2GB sys=14.9GB
+[INFO] [08-08|15:59:07.567] [6/16 Execution] Executed blocks         number=2195041 blk/s=1096.9 tx/s=2152.0 Mgas/s=508.7 gasState=0.63 batch=534.8MB alloc=2.5GB sys=14.9GB
+[INFO] [08-08|15:59:27.567] [6/16 Execution] Executed blocks         number=2219130 blk/s=1204.4 tx/s=2956.3 Mgas/s=596.8 gasState=0.65 batch=553.1MB alloc=2.5GB sys=14.9GB
+[INFO] [08-08|15:59:47.578] [6/16 Execution] Executed blocks         number=2243842 blk/s=1235.0 tx/s=2885.6 Mgas/s=584.4 gasState=0.67 batch=570.5MB alloc=3.7GB sys=14.9GB
+[INFO] [08-08|15:59:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=2.1GB sys=14.9GB
+[INFO] [08-08|16:00:07.569] [6/16 Execution] Executed blocks         number=2274266 blk/s=1521.8 tx/s=2110.7 Mgas/s=574.7 gasState=0.69 batch=586.4MB alloc=4.6GB sys=15.6GB
+[INFO] [08-08|16:00:27.571] [6/16 Execution] Executed blocks         number=2286222 blk/s=597.7 tx/s=1146.3 Mgas/s=308.1 gasState=0.70 batch=595.8MB alloc=4.3GB sys=15.6GB
+[INFO] [08-08|16:00:47.566] [6/16 Execution] Executed blocks         number=2300989 blk/s=738.5 tx/s=1168.3 Mgas/s=340.5 gasState=0.71 batch=604.5MB alloc=3.9GB sys=15.6GB
+[INFO] [08-08|16:00:48.314] [p2p] GoodPeers                          eth66=41
+[INFO] [08-08|16:00:48.319] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=4.0GB sys=15.6GB
+[INFO] [08-08|16:01:07.570] [6/16 Execution] Executed blocks         number=2309826 blk/s=441.8 tx/s=711.2 Mgas/s=255.3 gasState=0.72 batch=609.4MB alloc=2.6GB sys=15.6GB
+[INFO] [08-08|16:01:27.568] [6/16 Execution] Executed blocks         number=2324419 blk/s=729.7 tx/s=1047.7 Mgas/s=329.3 gasState=0.73 batch=619.0MB alloc=2.6GB sys=15.6GB
+[INFO] [08-08|16:01:47.567] [6/16 Execution] Executed blocks         number=2338435 blk/s=700.8 tx/s=959.6 Mgas/s=317.7 gasState=0.75 batch=627.3MB alloc=2.5GB sys=15.6GB
+[INFO] [08-08|16:01:48.319] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=2.6GB sys=15.6GB
+[INFO] [08-08|16:02:07.568] [6/16 Execution] Executed blocks         number=2352203 blk/s=688.4 tx/s=1020.8 Mgas/s=316.0 gasState=0.76 batch=636.3MB alloc=2.5GB sys=15.6GB
+[INFO] [08-08|16:02:27.569] [6/16 Execution] Executed blocks         number=2364781 blk/s=628.8 tx/s=1038.4 Mgas/s=322.1 gasState=0.77 batch=646.5MB alloc=2.5GB sys=15.6GB
+[INFO] [08-08|16:02:47.567] [6/16 Execution] Executed blocks         number=2376547 blk/s=588.4 tx/s=907.7 Mgas/s=304.0 gasState=0.78 batch=656.4MB alloc=2.4GB sys=15.6GB
+[INFO] [08-08|16:02:48.314] [p2p] GoodPeers                          eth66=42
+[INFO] [08-08|16:02:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=2.5GB sys=15.6GB
+[INFO] [08-08|16:03:07.568] [6/16 Execution] Executed blocks         number=2389386 blk/s=641.9 tx/s=1002.7 Mgas/s=303.2 gasState=0.79 batch=665.3MB alloc=3.5GB sys=15.6GB
+[INFO] [08-08|16:03:27.565] [6/16 Execution] Executed blocks         number=2403641 blk/s=712.8 tx/s=1121.5 Mgas/s=334.6 gasState=0.80 batch=675.3MB alloc=2.5GB sys=15.6GB
+[INFO] [08-08|16:03:47.579] [6/16 Execution] Executed blocks         number=2414316 blk/s=533.4 tx/s=957.2 Mgas/s=295.5 gasState=0.81 batch=684.5MB alloc=4.6GB sys=15.6GB
+[INFO] [08-08|16:03:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=4.6GB sys=15.6GB
+[INFO] [08-08|16:04:07.568] [6/16 Execution] Executed blocks         number=2427219 blk/s=645.5 tx/s=1011.1 Mgas/s=322.1 gasState=0.83 batch=694.4MB alloc=4.6GB sys=15.6GB
+[INFO] [08-08|16:04:27.567] [6/16 Execution] Executed blocks         number=2442404 blk/s=759.3 tx/s=1222.6 Mgas/s=320.2 gasState=0.84 batch=705.2MB alloc=4.5GB sys=15.6GB
+[INFO] [08-08|16:04:47.570] [6/16 Execution] Executed blocks         number=2454888 blk/s=624.1 tx/s=911.5 Mgas/s=202.1 gasState=0.84 batch=713.4MB alloc=4.1GB sys=15.6GB
+[INFO] [08-08|16:04:48.314] [p2p] GoodPeers                          eth66=42
+[INFO] [08-08|16:04:48.319] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=4.2GB sys=15.6GB
+[INFO] [08-08|16:05:07.567] [6/16 Execution] Executed blocks         number=2467709 blk/s=641.2 tx/s=925.1 Mgas/s=196.3 gasState=0.85 batch=721.6MB alloc=3.6GB sys=15.6GB
+[INFO] [08-08|16:05:27.568] [6/16 Execution] Executed blocks         number=2480522 blk/s=640.6 tx/s=808.9 Mgas/s=209.6 gasState=0.86 batch=729.6MB alloc=3.1GB sys=15.6GB
+[INFO] [08-08|16:05:47.570] [6/16 Execution] Executed blocks         number=2493038 blk/s=625.7 tx/s=885.6 Mgas/s=206.8 gasState=0.87 batch=738.3MB alloc=2.7GB sys=15.6GB
+[INFO] [08-08|16:05:48.319] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=2.8GB sys=15.6GB
+[INFO] [08-08|16:06:07.569] [6/16 Execution] Executed blocks         number=2508041 blk/s=750.2 tx/s=779.6 Mgas/s=208.0 gasState=0.87 batch=747.1MB alloc=4.6GB sys=15.6GB
+[INFO] [08-08|16:06:27.567] [6/16 Execution] Executed blocks         number=2521585 blk/s=677.3 tx/s=580.8 Mgas/s=190.5 gasState=0.88 batch=755.6MB alloc=4.0GB sys=15.6GB
+[INFO] [08-08|16:06:47.567] [6/16 Execution] Executed blocks         number=2529883 blk/s=414.9 tx/s=633.6 Mgas/s=190.9 gasState=0.89 batch=760.9MB alloc=3.0GB sys=15.6GB
+[INFO] [08-08|16:06:48.314] [p2p] GoodPeers                          eth66=42
+[INFO] [08-08|16:06:48.319] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=3.0GB sys=15.6GB
+[INFO] [08-08|16:07:07.576] [6/16 Execution] Executed blocks         number=2531218 blk/s=66.7 tx/s=608.4 Mgas/s=201.9 gasState=0.90 batch=762.3MB alloc=3.5GB sys=15.6GB
+[INFO] [08-08|16:07:27.568] [6/16 Execution] Executed blocks         number=2538816 blk/s=380.1 tx/s=724.3 Mgas/s=194.7 gasState=0.90 batch=766.9MB alloc=4.7GB sys=15.6GB
+[INFO] [08-08|16:07:47.567] [6/16 Execution] Executed blocks         number=2552663 blk/s=692.4 tx/s=686.4 Mgas/s=202.5 gasState=0.91 batch=773.6MB alloc=4.0GB sys=15.6GB
+[INFO] [08-08|16:07:48.319] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=4.1GB sys=15.6GB
+[INFO] [08-08|16:08:07.566] [6/16 Execution] Executed blocks         number=2581979 blk/s=1465.9 tx/s=2508.0 Mgas/s=461.5 gasState=0.93 batch=790.2MB alloc=4.3GB sys=15.6GB
+[INFO] [08-08|16:08:27.566] [6/16 Execution] Executed blocks         number=2601568 blk/s=979.4 tx/s=918.4 Mgas/s=261.1 gasState=0.94 batch=801.5MB alloc=3.9GB sys=15.6GB
+[INFO] [08-08|16:08:47.569] [6/16 Execution] Executed blocks         number=2617121 blk/s=777.5 tx/s=1607.9 Mgas/s=262.9 gasState=0.95 batch=811.4MB alloc=3.6GB sys=15.6GB
+[INFO] [08-08|16:08:48.314] [p2p] GoodPeers                          eth66=44
+[INFO] [08-08|16:08:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=3.7GB sys=15.6GB
+[INFO] [08-08|16:09:07.569] [6/16 Execution] Executed blocks         number=2625098 blk/s=398.8 tx/s=1369.4 Mgas/s=287.4 gasState=0.96 batch=816.7MB alloc=3.1GB sys=15.6GB
+[INFO] [08-08|16:09:27.571] [6/16 Execution] Executed blocks         number=2634459 blk/s=468.0 tx/s=637.7 Mgas/s=252.9 gasState=0.97 batch=822.8MB alloc=4.8GB sys=15.6GB
+[INFO] [08-08|16:09:47.566] [6/16 Execution] Executed blocks         number=2645904 blk/s=572.4 tx/s=658.1 Mgas/s=264.4 gasState=0.98 batch=829.9MB alloc=4.5GB sys=15.6GB
+[INFO] [08-08|16:09:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=4.5GB sys=15.6GB
+[INFO] [08-08|16:10:07.572] [6/16 Execution] Executed blocks         number=2656844 blk/s=546.8 tx/s=711.0 Mgas/s=282.0 gasState=0.99 batch=838.2MB alloc=4.1GB sys=15.6GB
+[INFO] [08-08|16:10:22.414] Committed State                          gas reached=549755908090 gasTarget=549755813888
+[INFO] [08-08|16:10:27.535] Flushed buffer file                      name=/home/ubuntu/.erigon_goerli/etl-temp/erigon-sortable-buf-2195460086 alloc=3.1GB sys=15.6GB
+[INFO] [08-08|16:10:31.775] Flushed buffer file                      name=/home/ubuntu/.erigon_goerli/etl-temp/erigon-sortable-buf-4089570971 alloc=3.3GB sys=15.6GB
+[INFO] [08-08|16:10:36.015] Flushed buffer file                      name=/home/ubuntu/.erigon_goerli/etl-temp/erigon-sortable-buf-307461805 alloc=3.5GB sys=15.6GB
+[INFO] [08-08|16:10:39.261] Flushed buffer file                      name=/home/ubuntu/.erigon_goerli/etl-temp/erigon-sortable-buf-4073953364 alloc=3.6GB sys=15.6GB
+[INFO] [08-08|16:10:48.315] [p2p] GoodPeers                          eth66=44
+[INFO] [08-08|16:10:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=19 alloc=2.9GB sys=15.7GB
+[INFO] [08-08|16:10:51.411] [] etl: temp files removed               total size=677.8MB
+[INFO] [08-08|16:10:52.955] [6/16 Execution] Executed blocks         number=2676849 blk/s=440.8 tx/s=491.4 Mgas/s=171.4 gasState=0.00 batch=0B alloc=4.0GB sys=15.7GB
+[INFO] [08-08|16:11:07.566] [6/16 Execution] Executed blocks         number=2684910 blk/s=551.7 tx/s=887.3 Mgas/s=293.1 gasState=0.01 batch=6.9MB alloc=1.5GB sys=15.7GB
+[INFO] [08-08|16:11:27.568] [6/16 Execution] Executed blocks         number=2702671 blk/s=888.0 tx/s=1462.6 Mgas/s=295.8 gasState=0.02 batch=19.2MB alloc=955.9MB sys=15.7GB
+[INFO] [08-08|16:11:47.568] [6/16 Execution] Executed blocks         number=2714677 blk/s=600.3 tx/s=759.7 Mgas/s=205.2 gasState=0.03 batch=26.9MB alloc=1.3GB sys=15.7GB
+[INFO] [08-08|16:11:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=20 alloc=1.3GB sys=15.7GB
+[INFO] [08-08|16:12:07.567] [6/16 Execution] Executed blocks         number=2724416 blk/s=487.0 tx/s=807.8 Mgas/s=248.8 gasState=0.04 batch=36.2MB alloc=1.1GB sys=15.7GB
+[INFO] [08-08|16:12:27.567] [6/16 Execution] Executed blocks         number=2732240 blk/s=391.2 tx/s=686.6 Mgas/s=239.1 gasState=0.04 batch=44.2MB alloc=1.7GB sys=15.7GB
+[INFO] [08-08|16:12:47.570] [6/16 Execution] Executed blocks         number=2739041 blk/s=340.0 tx/s=674.1 Mgas/s=246.2 gasState=0.05 batch=52.9MB alloc=1.7GB sys=15.7GB
+[INFO] [08-08|16:12:48.314] [p2p] GoodPeers                          eth66=44
+[INFO] [08-08|16:12:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=20 alloc=1.8GB sys=15.7GB
+[INFO] [08-08|16:13:07.568] [6/16 Execution] Executed blocks         number=2746739 blk/s=384.9 tx/s=815.0 Mgas/s=295.5 gasState=0.06 batch=61.8MB alloc=1.0GB sys=15.7GB
+[INFO] [08-08|16:13:27.571] [6/16 Execution] Executed blocks         number=2756531 blk/s=489.5 tx/s=749.3 Mgas/s=295.0 gasState=0.07 batch=72.5MB alloc=1.3GB sys=15.7GB
+[INFO] [08-08|16:13:47.571] [6/16 Execution] Executed blocks         number=2766101 blk/s=478.5 tx/s=763.1 Mgas/s=301.9 gasState=0.09 batch=83.5MB alloc=1.5GB sys=15.7GB
+[INFO] [08-08|16:13:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=20 alloc=1.6GB sys=15.7GB
+[INFO] [08-08|16:14:07.575] [6/16 Execution] Executed blocks         number=2776021 blk/s=495.9 tx/s=783.5 Mgas/s=308.0 gasState=0.10 batch=94.7MB alloc=1.7GB sys=15.7GB
+[INFO] [08-08|16:14:27.568] [6/16 Execution] Executed blocks         number=2785062 blk/s=452.2 tx/s=905.7 Mgas/s=291.0 gasState=0.11 batch=104.5MB alloc=1.9GB sys=15.7GB
+[INFO] [08-08|16:14:47.566] [6/16 Execution] Executed blocks         number=2794259 blk/s=459.9 tx/s=906.5 Mgas/s=281.5 gasState=0.12 batch=112.8MB alloc=1.9GB sys=15.7GB
+[INFO] [08-08|16:14:48.315] [p2p] GoodPeers                          eth66=44
+[INFO] [08-08|16:14:48.319] [txpool] stat                            block=0 pending=0 baseFee=0 queued=21 alloc=2.0GB sys=15.7GB
+[INFO] [08-08|16:15:07.569] [6/16 Execution] Executed blocks         number=2804261 blk/s=500.0 tx/s=975.5 Mgas/s=347.9 gasState=0.13 batch=123.0MB alloc=2.0GB sys=15.7GB
+[INFO] [08-08|16:15:27.566] [6/16 Execution] Executed blocks         number=2816414 blk/s=607.7 tx/s=1346.7 Mgas/s=494.9 gasState=0.15 batch=134.7MB alloc=1.2GB sys=15.7GB
+[INFO] [08-08|16:15:47.567] [6/16 Execution] Executed blocks         number=2838883 blk/s=1123.4 tx/s=1669.9 Mgas/s=611.5 gasState=0.17 batch=158.5MB alloc=1.4GB sys=15.7GB
+[INFO] [08-08|16:15:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=22 alloc=1.5GB sys=15.7GB
+[INFO] [08-08|16:16:07.566] [6/16 Execution] Executed blocks         number=2848138 blk/s=462.8 tx/s=1523.6 Mgas/s=433.0 gasState=0.19 batch=169.9MB alloc=1.2GB sys=15.7GB
+[INFO] [08-08|16:16:27.567] [6/16 Execution] Executed blocks         number=2853013 blk/s=243.7 tx/s=897.5 Mgas/s=305.6 gasState=0.20 batch=177.3MB alloc=1.2GB sys=15.7GB
+[INFO] [08-08|16:16:47.568] [6/16 Execution] Executed blocks         number=2860383 blk/s=368.5 tx/s=822.1 Mgas/s=273.2 gasState=0.21 batch=184.5MB alloc=1.9GB sys=15.7GB
+[INFO] [08-08|16:16:48.314] [p2p] GoodPeers                          eth66=44
+[INFO] [08-08|16:16:48.319] [txpool] stat                            block=0 pending=0 baseFee=0 queued=22 alloc=2.0GB sys=15.7GB
+[INFO] [08-08|16:17:07.567] [6/16 Execution] Executed blocks         number=2868150 blk/s=388.4 tx/s=629.3 Mgas/s=225.7 gasState=0.22 batch=190.4MB alloc=2.3GB sys=15.7GB
+[INFO] [08-08|16:17:27.566] [6/16 Execution] Executed blocks         number=2875900 blk/s=387.5 tx/s=571.9 Mgas/s=225.3 gasState=0.22 batch=196.5MB alloc=1.4GB sys=15.7GB
+[INFO] [08-08|16:17:47.569] [6/16 Execution] Executed blocks         number=2883590 blk/s=384.4 tx/s=781.9 Mgas/s=256.4 gasState=0.23 batch=204.6MB alloc=1.9GB sys=15.7GB
+[INFO] [08-08|16:17:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=22 alloc=2.0GB sys=15.7GB
+[INFO] [08-08|16:18:07.568] [6/16 Execution] Executed blocks         number=2891689 blk/s=405.0 tx/s=727.2 Mgas/s=245.0 gasState=0.24 batch=212.0MB alloc=1.4GB sys=15.7GB
+[INFO] [08-08|16:18:27.569] [6/16 Execution] Executed blocks         number=2899851 blk/s=408.1 tx/s=688.9 Mgas/s=236.3 gasState=0.25 batch=219.2MB alloc=1.9GB sys=15.7GB
+[INFO] [08-08|16:18:47.569] [6/16 Execution] Executed blocks         number=2908756 blk/s=445.2 tx/s=655.9 Mgas/s=230.3 gasState=0.26 batch=225.8MB alloc=1.4GB sys=15.7GB
+[INFO] [08-08|16:18:48.315] [p2p] GoodPeers                          eth66=45
+[INFO] [08-08|16:18:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=22 alloc=1.5GB sys=15.7GB
+[INFO] [08-08|16:19:07.568] [6/16 Execution] Executed blocks         number=2916660 blk/s=395.2 tx/s=677.8 Mgas/s=218.5 gasState=0.27 batch=231.5MB alloc=1.8GB sys=15.7GB
+[INFO] [08-08|16:19:27.575] [6/16 Execution] Executed blocks         number=2925063 blk/s=420.0 tx/s=1487.9 Mgas/s=311.9 gasState=0.28 batch=239.1MB alloc=1.6GB sys=15.7GB
+[INFO] [08-08|16:19:47.566] [6/16 Execution] Executed blocks         number=2932881 blk/s=391.1 tx/s=1970.0 Mgas/s=298.8 gasState=0.29 batch=245.8MB alloc=2.4GB sys=15.7GB
+[INFO] [08-08|16:19:48.319] [txpool] stat                            block=0 pending=0 baseFee=0 queued=22 alloc=1.4GB sys=15.7GB
+[INFO] [08-08|16:20:07.570] [6/16 Execution] Executed blocks         number=2942103 blk/s=461.0 tx/s=820.7 Mgas/s=257.1 gasState=0.30 batch=254.6MB alloc=2.0GB sys=15.7GB
+[INFO] [08-08|16:20:27.571] [6/16 Execution] Executed blocks         number=2951403 blk/s=465.0 tx/s=673.5 Mgas/s=242.2 gasState=0.31 batch=262.1MB alloc=1.4GB sys=15.7GB
+[INFO] [08-08|16:20:47.566] [6/16 Execution] Executed blocks         number=2960523 blk/s=456.1 tx/s=752.8 Mgas/s=245.0 gasState=0.32 batch=268.9MB alloc=2.1GB sys=15.7GB
+[INFO] [08-08|16:20:48.315] [p2p] GoodPeers                          eth66=44
+[INFO] [08-08|16:20:48.319] [txpool] stat                            block=0 pending=0 baseFee=0 queued=22 alloc=2.2GB sys=15.7GB
+[INFO] [08-08|16:21:07.567] [6/16 Execution] Executed blocks         number=2969912 blk/s=469.4 tx/s=747.6 Mgas/s=311.3 gasState=0.33 batch=276.2MB alloc=1.7GB sys=15.7GB
+[INFO] [08-08|16:21:27.569] [6/16 Execution] Executed blocks         number=2986182 blk/s=813.4 tx/s=1205.2 Mgas/s=774.7 gasState=0.36 batch=291.7MB alloc=2.2GB sys=15.7GB
+[INFO] [08-08|16:21:47.569] [6/16 Execution] Executed blocks         number=3009517 blk/s=1166.8 tx/s=1431.7 Mgas/s=626.9 gasState=0.38 batch=308.0MB alloc=3.2GB sys=15.7GB
+[INFO] [08-08|16:21:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=22 alloc=3.3GB sys=15.7GB
+[INFO] [08-08|16:22:07.566] [6/16 Execution] Executed blocks         number=3019294 blk/s=488.9 tx/s=772.5 Mgas/s=500.3 gasState=0.40 batch=319.0MB alloc=2.1GB sys=15.7GB
+[INFO] [08-08|16:22:27.570] [6/16 Execution] Executed blocks         number=3028314 blk/s=450.9 tx/s=678.0 Mgas/s=414.4 gasState=0.41 batch=325.6MB alloc=2.6GB sys=15.7GB
+[INFO] [08-08|16:22:47.567] [6/16 Execution] Executed blocks         number=3038634 blk/s=516.1 tx/s=584.6 Mgas/s=413.6 gasState=0.43 batch=332.0MB alloc=3.2GB sys=15.7GB
+[INFO] [08-08|16:22:48.314] [p2p] GoodPeers                          eth66=46
+[INFO] [08-08|16:22:48.319] [txpool] stat                            block=0 pending=0 baseFee=0 queued=22 alloc=3.2GB sys=15.7GB
+[INFO] [08-08|16:23:07.568] [6/16 Execution] Executed blocks         number=3048071 blk/s=471.8 tx/s=807.6 Mgas/s=486.4 gasState=0.44 batch=340.3MB alloc=2.3GB sys=15.7GB
+[INFO] [08-08|16:23:27.567] [6/16 Execution] Executed blocks         number=3057669 blk/s=479.9 tx/s=796.3 Mgas/s=366.5 gasState=0.46 batch=348.2MB alloc=2.8GB sys=15.7GB
+[INFO] [08-08|16:23:47.569] [6/16 Execution] Executed blocks         number=3067221 blk/s=477.5 tx/s=1258.0 Mgas/s=272.2 gasState=0.47 batch=356.4MB alloc=3.2GB sys=15.7GB
+[INFO] [08-08|16:23:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=22 alloc=3.3GB sys=15.7GB
+[INFO] [08-08|16:24:07.571] [6/16 Execution] Executed blocks         number=3076656 blk/s=471.7 tx/s=941.4 Mgas/s=257.4 gasState=0.48 batch=363.7MB alloc=1.9GB sys=15.7GB
+[INFO] [08-08|16:24:27.566] [6/16 Execution] Executed blocks         number=3086136 blk/s=474.1 tx/s=778.2 Mgas/s=263.5 gasState=0.49 batch=371.4MB alloc=2.1GB sys=15.7GB
+[INFO] [08-08|16:24:47.567] [6/16 Execution] Executed blocks         number=3094224 blk/s=404.4 tx/s=1657.4 Mgas/s=312.4 gasState=0.50 batch=379.3MB alloc=2.7GB sys=15.7GB
+[INFO] [08-08|16:24:48.314] [p2p] GoodPeers                          eth66=48
+[INFO] [08-08|16:24:48.320] [txpool] stat                            block=0 pending=0 baseFee=0 queued=22 alloc=2.8GB sys=15.7GB
+[INFO] [08-08|16:25:07.566] [6/16 Execution] Executed blocks         number=3107472 blk/s=662.4 tx/s=1331.0 Mgas/s=381.5 gasState=0.51 batch=392.6MB alloc=3.4GB sys=15.7GB
+[INFO] [08-08|16:25:27.569] [6/16 Execution] Executed blocks         number=3116875 blk/s=470.1 tx/s=853.6 Mgas/s=262.0 gasState=0.52 batch=400.2MB alloc=2.0GB sys=15.7GB
+[INFO] [08-08|16:25:47.570] [6/16 Execution] Executed blocks         number=3126090 blk/s=460.7 tx/s=1045.4 Mgas/s=271.7 gasState=0.53 batch=408.6MB alloc=2.4GB sys=15.7GB
+[INFO] [08-08|16:25:48.320] [txpool] stat                            block=0 pending=3 baseFee=0 queued=31 alloc=2.5GB sys=15.7GB
+[INFO] [08-08|16:26:07.566] [6/16 Execution] Executed blocks         number=3137284 blk/s=559.8 tx/s=1535.2 Mgas/s=610.6 gasState=0.55 batch=423.2MB alloc=3.5GB sys=15.7GB
+[INFO] [08-08|16:26:27.566] [6/16 Execution] Executed blocks         number=3157610 blk/s=1016.3 tx/s=2914.7 Mgas/s=1255.6 gasState=0.60 batch=450.7MB alloc=3.6GB sys=15.7GB
+[INFO] [08-08|16:26:47.566] [6/16 Execution] Executed blocks         number=3179021 blk/s=1070.6 tx/s=2652.8 Mgas/s=1257.1 gasState=0.64 batch=473.7MB alloc=3.9GB sys=15.7GB
+[INFO] [08-08|16:26:48.314] [p2p] GoodPeers                          eth66=49
+[INFO] [08-08|16:26:48.320] [txpool] stat                            block=0 pending=3 baseFee=0 queued=31 alloc=2.4GB sys=15.7GB
+[INFO] [08-08|16:27:07.567] [6/16 Execution] Executed blocks         number=3188373 blk/s=467.6 tx/s=1001.3 Mgas/s=281.0 gasState=0.65 batch=481.9MB alloc=2.7GB sys=15.7GB
+[INFO] [08-08|16:27:27.567] [6/16 Execution] Executed blocks         number=3197891 blk/s=475.9 tx/s=999.0 Mgas/s=274.3 gasState=0.66 batch=489.1MB alloc=3.1GB sys=15.7GB
+[INFO] [08-08|16:27:47.568] [6/16 Execution] Executed blocks         number=3207347 blk/s=472.8 tx/s=1076.1 Mgas/s=323.9 gasState=0.68 batch=502.2MB alloc=3.6GB sys=15.7GB
+[INFO] [08-08|16:27:48.320] [txpool] stat                            block=0 pending=3 baseFee=0 queued=31 alloc=3.7GB sys=15.7GB
+[INFO] [08-08|16:28:07.571] [6/16 Execution] Executed blocks         number=3216249 blk/s=445.0 tx/s=999.1 Mgas/s=295.7 gasState=0.69 batch=510.4MB alloc=3.8GB sys=15.7GB
+[INFO] [08-08|16:28:27.570] [6/16 Execution] Executed blocks         number=3225244 blk/s=449.8 tx/s=1029.2 Mgas/s=294.7 gasState=0.70 batch=518.1MB alloc=4.2GB sys=15.7GB

@@ -1,0 +1,57 @@
+<head>
+    <!-- Load plotly.js into the DOM -->
+    <script src='https://cdn.plot.ly/plotly-2.12.1.min.js'></script>
+</head>
+
+<body>
+<div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
+</body>
+
+<script>
+    var getJSON = function(url, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', url, true);
+        xhr.responseType = 'json';
+        xhr.onload = function() {
+            var status = xhr.status;
+            if (status === 200) {
+                callback(null, xhr.response);
+            } else {
+                callback(status, xhr.response);
+            }
+        };
+        xhr.send();
+    };
+
+    getJSON('output.json',
+        function(err, data) {
+            if (err !== null) {
+                alert('Something went wrong: ' + err);
+            } else {
+
+                times = [];
+                vals = [];
+                for (let d of data) {
+                    console.log(d);
+                    times.push(d.time);
+                    if (d.type == "execution") {
+                        vals.push(10);
+                    } else {
+                        vals.push(5);
+                    }
+                }
+
+                var data = [
+                    {
+                        x: times,
+                        y: vals,
+                        type: 'scatter'
+                    }
+                ];
+                Plotly.newPlot('myDiv', data);
+            }
+        });
+
+
+
+</script>
