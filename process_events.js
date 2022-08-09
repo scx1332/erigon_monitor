@@ -1,3 +1,7 @@
+function getDateDifferenceInSecs(date1, date2) {
+    return (date1.getTime() - date2.getTime()) / 1000;
+}
+
 
 function plotFromErigonLogEvents(data) {
     let events = data.events;
@@ -8,7 +12,7 @@ function plotFromErigonLogEvents(data) {
     let execution_to = 1;
     for (let d of events) {
         if (d.type == "execution") {
-            times.push(d.time);
+            times.push(new Date(d.time));
             block_nums.push(parseFloat(d.info.blk_num));
             block_speeds.push(parseFloat(d.info.blk_per_s));
         } else if (d.type == "execution_limits") {
@@ -19,56 +23,67 @@ function plotFromErigonLogEvents(data) {
     }
     console.log(execution_to);
 
-    let xmin = times[0];
-    let xmax = times[times.length - 1];
 
-    let last_date = new Date(times[times.length - 1]);
-    let date2 = new Date(times[times.length - 20]);
-    let difference = last_date.getTime()-date2.getTime();
-    console.log("Difference: " + difference / 1000 + "s.");
-    let dif_secs = difference / 1000;
+    if (times.length > 10) {
+        let xmin = times[0];
+        let xmax = times[times.length - 1];
 
+        let last_date = times[times.length - 1];
 
-    let last_speed = (block_nums[times.length - 1] - block_nums[times.length - 20]) / dif_secs;
-    console.log("Block per sec: " + last_speed);
-    console.log(last_speed);
-
-    let block_left = execution_to - block_nums[times.length - 1];
-    console.log("Block left: " + block_left);
-    let time_left = block_left / last_speed;
-    console.log("Time left: " + time_left);
-
-    //todo
-    last_date.getTime()
-    let new_date = new Date();
-    new_date.setSeconds(last_date.getSeconds() + time_left);
-    let new_date_str = new_date.toISOString();
+        const COMPARE_EVENTS_BEFORE = Math.min(50, times.length - 1);
+        let date2 = times[times.length - COMPARE_EVENTS_BEFORE];
+        let dif_secs = getDateDifferenceInSecs(last_date, date2);
 
 
+        let last_speed = (block_nums[times.length - 1] - block_nums[times.length - COMPARE_EVENTS_BEFORE]) / dif_secs;
+        console.log("Block per sec: " + last_speed);
+        console.log(last_speed);
+
+        let block_left = execution_to - block_nums[times.length - 1];
+        console.log("Block left: " + block_left);
+        let time_left = block_left / last_speed;
+        console.log("Time left: " + time_left);
+
+        //todo
+        last_date.getTime()
+        let new_date = new Date();
+
+        //new_date.setUTCSeconds(last_date.getUTCSeconds());
+        new_date.setTime(last_date.getTime() + time_left * 1000);
+
+        let plotlyData = [
+            {
+                x: times,
+                y: block_nums,
+                type: 'scatter',
+            },
+            {
+                x: [xmin, new_date],
+                y: [execution_to, execution_to],
+                type: 'scatter'
+            },
+            {
+                x: [xmin, new_date],
+                y: [execution_from, execution_from],
+                type: 'scatter'
+            },
+            {
+                x: [xmax, new_date],
+                y: [block_nums[times.length - 1], execution_to],
+                type: 'scatter',
+
+            }
+        ];
+        return plotlyData;
+    }
+
+    return [];
 
 
 
-    let plotlyData = [
-        {
-            x: times,
-            y: block_nums,
-            type: 'scatter',
-        },
-        {
-            x: [xmin, new_date_str],
-            y: [execution_to, execution_to],
-            type: 'scatter'
-        },
-        {
-            x: [xmin, new_date_str],
-            y: [execution_from, execution_from],
-            type: 'scatter'
-        },
-        {
-            x: [xmax, new_date_str],
-            y: [block_nums[times.length - 1], execution_to],
-            type: 'scatter',
 
-        }
-    ];
+
+
+
+
 }
