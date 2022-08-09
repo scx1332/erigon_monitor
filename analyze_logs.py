@@ -94,14 +94,18 @@ def parse_info_line(line):
 
 
 events = []
-for line in open("goerli_err.log"):
-    if line.startswith("[INFO]"):
-        try:
-            events.append(parse_info_line(line))
-        except Exception as ex:
-            print(f"Error when parsing {ex}")
-    else:
-        print("Unknown line")
+for line in open("erigon_box.log"):
+    info_split = line.split("[INFO]")
+
+    if len(info_split) >= 2:
+        line = "[INFO]" + "[INFO]".join(info_split[1:])
+        if line.startswith("[INFO]"):
+            try:
+                events.append(parse_info_line(line))
+            except Exception as ex:
+                print(f"Error when parsing {ex}")
+        else:
+            print("Unknown line")
 
 response = {}
 response["events"] = events

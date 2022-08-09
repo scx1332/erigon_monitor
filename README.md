@@ -19,3 +19,9 @@ python analyze_logs.py
 ```
 python -m http.server
 ```
+
+Extracting Erigoon log from journal
+
+```
+journalctl _PID=`pgrep erigon` > erigon.log
+```
