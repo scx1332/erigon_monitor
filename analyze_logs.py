@@ -94,7 +94,7 @@ def parse_info_line(line):
 
 
 events = []
-for line in open("erigon_box.log"):
+for line in open("erigon.log"):
     info_split = line.split("[INFO]")
 
     if len(info_split) >= 2:
