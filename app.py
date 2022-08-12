@@ -3,7 +3,22 @@ from flask_cors import CORS, cross_origin
 from flask import request
 from analyze_logs import parse_info_line
 import json
+import os
+import shutil
+import argparse
 from multiprocessing import Process
+
+
+
+parser = argparse.ArgumentParser(description='Erigon monitor params')
+parser.add_argument('--no-dump-journal', dest="dumpjournal", action='store_false', help='No journal dump for debugging')
+parser.add_argument('--host', dest="host", type=str, help='Host name', default="127.0.0.1")
+parser.add_argument('--port', dest="port", type=int, help='Port number', default="5000")
+parser.set_defaults(dumpjournal=True)
+
+args = parser.parse_args()
+
+
 
 total_events = 0
 
@@ -12,21 +27,28 @@ events_history = {}
 
 # noinspection DuplicatedCode
 def compute_events():
-    events = []
-    for line in open("erigon.log"):
+    if os.path.exists("current.log"):
+        os.remove("current.log")
+    if args.dumpjournal:
+        os.system("./dump_erigon_log.sh")
+    else:
+        shutil.copy("erigon.log", "current.log")
+
+    loc_events = []
+    for line in open("current.log"):
         info_split = line.split("[INFO]")
 
         if len(info_split) >= 2:
             line = "[INFO]" + "[INFO]".join(info_split[1:])
             if line.startswith("[INFO]"):
                 try:
-                    events.append(parse_info_line(line))
+                    loc_events.append(parse_info_line(line))
                 except Exception as ex:
                     print(f"Error when parsing {ex}")
             else:
                 print("Unknown line")
 
-    return {"events": events}
+    return {"events": loc_events}
 
 
 class ProcessClass:
@@ -86,7 +108,6 @@ def events():
     )
     return resp
 
-
 if __name__ == "__main__":
     print("test")
-    app.run(host='0.0.0.0', port='5000', debug=True)
+    app.run(host=args.host, port=args.port, debug=True)
