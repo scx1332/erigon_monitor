@@ -74,7 +74,12 @@ function plotFromErigonLogEvents(data) {
 
             }
         ];
-        return plotlyData;
+        return {
+            "plotlyData": plotlyData,
+            "lastSpeed": last_speed,
+            "estimatedCompletion": new_date,
+            "lastDate": last_date,
+        };
     }
 
     return [];

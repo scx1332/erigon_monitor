@@ -5,7 +5,12 @@
 </head>
 
 <body>
-    <div id="lastCheck"></div>
+
+    <div style="padding: 20px;">
+        <div style="padding: 10px;">Last check: <span id="lastCheck"></span> <span id="lastErigon">Last Erigon event:</span></div>
+        <div style="padding: 10px;">Last block speed: <span id="lastSpeed"></span> blocks/s</div>
+        <div style="padding: 10px;">Estimated completion: <span id="estCompletion"></span> </div>
+    </div>
     <div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
 </body>
 
@@ -26,16 +31,22 @@
     };
 
     let plotFromJson = function (data) {
-        let plotlyData = plotFromErigonLogEvents(data);
-        Plotly.newPlot('myDiv', plotlyData);
+        let d = plotFromErigonLogEvents(data);
+        Plotly.newPlot('myDiv', d["plotlyData"]);
+
+
+        document.getElementById("lastSpeed").innerHTML=d["lastSpeed"];
+        document.getElementById("estCompletion").innerHTML=d["estimatedCompletion"];
+        document.getElementById("lastErigon").innerHTML=d["lastDate"];
+
     }
     getJSON('http://54.36.174.74:5000/events',
         function(err, data) {
             if (err !== null) {
                 alert('Something went wrong: ' + err);
             } else {
-                plotFromJson(data);
                 document.getElementById("lastCheck").innerHTML=data["last_check"];
+                plotFromJson(data);
             }
         });
 
