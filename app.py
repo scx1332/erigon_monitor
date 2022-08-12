@@ -1,3 +1,5 @@
+import time
+
 from flask import Flask
 from flask_cors import CORS, cross_origin
 from flask import request
@@ -53,23 +55,33 @@ def compute_events():
 
 class ProcessClass:
     def __init__(self):
-        # = Process(target=self.run, args=())
-        # p.daemon = True                       # Daemonize it
-        # p.start()                             # Start the execution
+        p = Process(target=self.run, args=())
+        p.daemon = True                       # Daemonize it
+        p.start()                             # Start the execution
         pass
 
     def run(self):
 
-        #
-        # This might take several minutes to complete
-        loc_events = compute_events()
+        while True:
+            #
+            # This might take several minutes to complete
+            loc_events = compute_events()
 
-        global events_history
-        for ev in loc_events["events"]:
-            if ev["time"] not in events_history:
-                events_history[ev["time"]] = ev
+            events_history
+            for ev in loc_events["events"]:
+                if ev["time"] not in events_history:
+                    events_history[ev["time"]] = ev
 
-        print(len(events_history))
+            data = {}
+            data["events"] = []
+            for date in events_history:
+                data["events"].append(events_history[date])
+
+            with open("events_history.json", "w") as w:
+                w.write(json.dumps(data, indent=4, default=str))
+
+            time.sleep(10.0)
+
 
 
 app = Flask(__name__)
@@ -84,30 +96,22 @@ def hello():
     return 'Hello, World!'
 
 
-@app.route('/start')
-def start():
-    begin = ProcessClass()
-    begin.run()
-
-    return "Task is in progress"
 
 
 @app.route('/events')
 @cross_origin()
 def events():
     global events_history
-    data = {}
-    data["events"] = []
-    for date in events_history:
-        data["events"].append(events_history[date])
 
-    resp = app.response_class(
-        response=json.dumps(data, indent=4, default=str),
-        status=200,
-        mimetype='application/json'
-    )
+    with open("events_history.json", "r") as f:
+        resp = app.response_class(
+            response=f.read(),
+            status=200,
+            mimetype='application/json'
+        )
     return resp
 
 if __name__ == "__main__":
     print("test")
+    begin = ProcessClass()
     app.run(host=args.host, port=args.port, debug=True)
