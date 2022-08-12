@@ -16,6 +16,7 @@ parser = argparse.ArgumentParser(description='Erigon monitor params')
 parser.add_argument('--no-dump-journal', dest="dumpjournal", action='store_false', help='No journal dump for debugging')
 parser.add_argument('--host', dest="host", type=str, help='Host name', default="127.0.0.1")
 parser.add_argument('--port', dest="port", type=int, help='Port number', default="5000")
+parser.add_argument('--interval', dest="interval", type=int, help='Log scanning interval', default="30")
 parser.set_defaults(dumpjournal=True)
 
 args = parser.parse_args()
@@ -79,10 +80,12 @@ class ProcessClass:
             for date in events_history:
                 data["events"].append(events_history[date])
 
+            data["last_check"] = date.today()
+
             with open("events_history.json", "w") as w:
                 w.write(json.dumps(data, indent=4, default=str))
 
-            time.sleep(10.0)
+            time.sleep(args.interval)
 
 
 
