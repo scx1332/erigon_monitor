@@ -29,7 +29,7 @@
         Plotly.newPlot('myDiv', plotlyData);
     }
 
-    getJSON('output.json',
+    getJSON('http://127.0.0.1:5000/events',
         function(err, data) {
             if (err !== null) {
                 alert('Something went wrong: ' + err);

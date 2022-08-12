@@ -1,6 +1,7 @@
 from datetime import datetime
 import json
 
+
 def get_date_from_line(line):
     splits = line.split("[")
     date_part = splits[2].split("]")[0]
@@ -92,24 +93,25 @@ def parse_info_line(line):
 
     #print(f"Datetime parsed {dt} from {line}")
 
+if __name__ == "__main__":
+    events = []
+    for line in open("erigon.log"):
+        info_split = line.split("[INFO]")
 
-events = []
-for line in open("erigon.log"):
-    info_split = line.split("[INFO]")
+        if len(info_split) >= 2:
+            line = "[INFO]" + "[INFO]".join(info_split[1:])
+            if line.startswith("[INFO]"):
+                try:
+                    events.append(parse_info_line(line))
+                except Exception as ex:
+                    print(f"Error when parsing {ex}")
+            else:
+                print("Unknown line")
 
-    if len(info_split) >= 2:
-        line = "[INFO]" + "[INFO]".join(info_split[1:])
-        if line.startswith("[INFO]"):
-            try:
-                events.append(parse_info_line(line))
-            except Exception as ex:
-                print(f"Error when parsing {ex}")
-        else:
-            print("Unknown line")
+    response = {}
+    response["events"] = events
 
-response = {}
-response["events"] = events
+    with open("output.json", "w") as f:
+        f.write(json.dumps(response, indent=4, default=str))
+    print(json.dumps(response, indent=4, default=str))
 
-with open("output.json", "w") as f:
-    f.write(json.dumps(response, indent=4, default=str))
-print(json.dumps(response, indent=4, default=str))
