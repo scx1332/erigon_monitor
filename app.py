@@ -30,7 +30,7 @@ def compute_events():
     if os.path.exists("current.log"):
         os.remove("current.log")
     if args.dumpjournal:
-        os.system("./dump_erigon_log.sh")
+        os.system("/bin/bash dump_erigon_logs.sh")
     else:
         shutil.copy("erigon.log", "current.log")
 
