@@ -44,7 +44,9 @@ def compute_events():
             line = "[INFO]" + "[INFO]".join(info_split[1:])
             if line.startswith("[INFO]"):
                 try:
-                    loc_events.append(parse_info_line(line))
+                    event = parse_info_line(line)
+                    if event:
+                        loc_events.append(event)
                 except Exception as ex:
                     print(f"Error when parsing {ex}")
             else:

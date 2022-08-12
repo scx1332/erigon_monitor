@@ -70,15 +70,17 @@ def parse_info_line(line):
     if "[Snapshots] download" in line:
         event["type"] = "snapshot"
         event["info"] = parse_snapshot_line(line)
-        print("Downloading snapshots")
+        return None
 
     if "[1/16 Headers]" in line:
         event["type"] = "headers"
         event["info"] = parse_headers_line(line)
+        return None
 
     if "[4/16 Bodies]" in line:
         event["type"] = "bodies"
         event["info"] = parse_bodies_line(line)
+        return None
 
     if "[6/16 Execution]" in line:
         if "Executed blocks" in line:
@@ -102,7 +104,9 @@ if __name__ == "__main__":
             line = "[INFO]" + "[INFO]".join(info_split[1:])
             if line.startswith("[INFO]"):
                 try:
-                    events.append(parse_info_line(line))
+                    event = parse_info_line(line)
+                    if event:
+                        events.append(event)
                 except Exception as ex:
                     print(f"Error when parsing {ex}")
             else:
