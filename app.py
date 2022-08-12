@@ -100,7 +100,15 @@ def hello():
     print("test")
     return 'Hello, World!'
 
-
+@app.route('/html')
+def html():
+    with open("plot.html", "r") as f:
+        resp = app.response_class(
+            response=f.read(),
+            status=200,
+            mimetype='text/html'
+        )
+    return resp
 
 
 @app.route('/events')
