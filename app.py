@@ -1,6 +1,6 @@
 import time
 
-from flask import Flask
+from flask import Flask, render_template, url_for
 from flask_cors import CORS, cross_origin
 from flask import request
 from analyze_logs import parse_info_line
@@ -68,22 +68,25 @@ class ProcessClass:
         while True:
             #
             # This might take several minutes to complete
-            loc_events = compute_events()
+            try:
+                loc_events = compute_events()
 
-            events_history
-            for ev in loc_events["events"]:
-                if ev["time"] not in events_history:
-                    events_history[ev["time"]] = ev
+                events_history
+                for ev in loc_events["events"]:
+                    if ev["time"] not in events_history:
+                        events_history[ev["time"]] = ev
 
-            data = {}
-            data["events"] = []
-            for date in events_history:
-                data["events"].append(events_history[date])
+                data = {}
+                data["events"] = []
+                for date in events_history:
+                    data["events"].append(events_history[date])
 
-            data["last_check"] = date.today()
+                data["last_check"] = date.today()
 
-            with open("events_history.json", "w") as w:
-                w.write(json.dumps(data, indent=4, default=str))
+                with open("events_history.json", "w") as w:
+                    w.write(json.dumps(data, indent=4, default=str))
+            except Exception as ex:
+                print(f"Problem encountered: {ex}")
 
             time.sleep(args.interval)
 
@@ -102,13 +105,7 @@ def hello():
 
 @app.route('/html')
 def html():
-    with open("plot.html", "r") as f:
-        resp = app.response_class(
-            response=f.read(),
-            status=200,
-            mimetype='text/html'
-        )
-    return resp
+    return render_template('plot.html', events_url=url_for("events"))
 
 
 @app.route('/events')
