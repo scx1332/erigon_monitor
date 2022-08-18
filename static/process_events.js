@@ -3,7 +3,7 @@ function getDateDifferenceInSecs(date1, date2) {
 }
 
 
-function plotFromErigonLogEvents(data) {
+function plotFromErigonLogEvents(data, sizes) {
     let events = data.events;
     let times = [];
     let block_nums = [];
@@ -22,6 +22,15 @@ function plotFromErigonLogEvents(data) {
         }
     }
     console.log(execution_to);
+
+    let sizes_times = []
+    let sizes_values = []
+    console.log(sizes);
+    for (let dt in sizes) {
+        sizes_times.push(dt);
+        sizes_values.push(sizes[dt]["erigon_data_size"]);
+
+    }
 
 
     if (times.length > 10) {
@@ -72,6 +81,12 @@ function plotFromErigonLogEvents(data) {
                 y: [block_nums[times.length - 1], execution_to],
                 type: 'scatter',
 
+            },
+            {
+                x: sizes_times,
+                y: sizes_values,
+                type: 'scatter',
+                yaxis: 'y2'
             }
         ];
         return {

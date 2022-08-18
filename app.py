@@ -137,7 +137,7 @@ def hello():
 
 @app.route('/html')
 def html():
-    return render_template('plot.html', events_url=url_for("events"))
+    return render_template('plot.html', events_url=url_for("events"), sizes_url=url_for("sizes"))
 
 @app.route('/sizes')
 @cross_origin()

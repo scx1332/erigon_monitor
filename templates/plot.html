@@ -30,9 +30,19 @@
         xhr.send();
     };
 
-    let plotFromJson = function (data) {
-        let d = plotFromErigonLogEvents(data);
-        Plotly.newPlot('myDiv', d["plotlyData"]);
+    let plotFromJson = function (data, sizes) {
+        let d = plotFromErigonLogEvents(data, sizes);
+        Plotly.newPlot('myDiv', d["plotlyData"], {
+            title: 'Double Y Axis Example',
+            yaxis: {title: 'yaxis title'},
+            yaxis2: {
+                title: 'yaxis2 title',
+                titlefont: {color: 'rgb(148, 103, 189)'},
+                tickfont: {color: 'rgb(148, 103, 189)'},
+                overlaying: 'y',
+                side: 'right'
+            }
+        });
 
 
         document.getElementById("lastSpeed").innerHTML=d["lastSpeed"];
@@ -41,12 +51,21 @@
 
     }
     getJSON('{{events_url}}',
-        function(err, data) {
+        function(err, events) {
             if (err !== null) {
                 alert('Something went wrong: ' + err);
             } else {
-                document.getElementById("lastCheck").innerHTML=data["last_check"];
-                plotFromJson(data);
+                getJSON('{{sizes_url}}',
+                    function(err, sizes) {
+                        if (err !== null) {
+                            alert('Something went wrong: ' + err);
+                        } else {
+                            console.log(`Sizes ${sizes}`)
+                            document.getElementById("lastCheck").innerHTML=events["last_check"];
+
+                            plotFromJson(events, sizes);
+                        }
+                    });
             }
         });
 
