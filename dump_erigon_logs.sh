@@ -1,2 +1,2 @@
 #!/bin/bash
-journalctl -u erigon-mainnet > current.log
+journalctl -u erigon-mainnet > erigon_current.log
