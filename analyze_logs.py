@@ -64,7 +64,7 @@ def parse_execution_line(line):
 
 def parse_info_line(line):
     dt = get_date_from_line(line)
-    if dt < datetime.fromisoformat("2022-08-18T20:25:00"):
+    if dt < datetime.fromisoformat("2022-08-18T19:00:00"):
         return None
     event = {
         "time": dt
