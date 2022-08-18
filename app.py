@@ -31,7 +31,7 @@ args = parser.parse_args()
 total_events = 0
 
 events_history = {}
-size_history = {}
+
 
 # noinspection DuplicatedCode
 def compute_events():
@@ -71,7 +71,11 @@ class ProcessClass:
         pass
 
     def run(self):
+        size_history = {}
 
+        if os.path.exists("size_history.json"):
+            with open("size_history.json", "r") as r:
+                size_history = json.loads(r.read())
         while True:
             try:
                 erigon_data_folder = args.erigon_data_path
@@ -164,4 +168,4 @@ def events():
 if __name__ == "__main__":
     print("test")
     begin = ProcessClass()
-    app.run(host=args.host, port=args.port, debug=True)
+    app.run(host=args.host, port=args.port, debug=True, use_reloader=False)
